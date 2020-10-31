@@ -15,7 +15,8 @@ address VARCHAR(100)
 
 try:
     cur.execute(sql)
-except:
+except Exception as exp:
+    print("not executed", "\n", exp)
     conn.rollback()
 
 for x in cur:

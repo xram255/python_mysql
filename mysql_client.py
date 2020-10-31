@@ -5,16 +5,17 @@ conn = mycon.connect(host="localhost", user="root", password="", db="corp")
 cur = conn.cursor()
 
 sql = '''INSERT INTO people (id, name, lastname, telephone, email, address)
-VALUES (NULL, 'Anna', 'Williams', '5417234', 'annawill@mail.com', '783/2, main st')
+VALUES (NULL, 'Anna', 'Williams', 899457, 'annawill@mail.com', '783/2, main st')
 '''
 
 try:
     cur.execute(sql)
     conn.commit()
     print("executed")
-except:
-    print("not executed")
+except Exception as err:
     conn.rollback()
+    print(err, "\n", "closing..")
+    exit()
 
 cur.execute("SELECT * FROM people")
 
