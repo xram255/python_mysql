@@ -15,6 +15,5 @@ cur.execute("SHOW DATABASES")
 for x in cur:
     print(x)
 
-
 cur.close()
 conn.close()

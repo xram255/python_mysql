@@ -3,7 +3,8 @@ from mysql import connector as mycon
 conn = mycon.connect(host="localhost", user="root", passwd="", db="corp")
 cur = conn.cursor()
 
-cmmnd = "SELECT email FROM people"
+cmmnd = "SELECT * FROM people"
+#cmmnd = "DESCRIBE people"
 
 try:
     cur.execute(cmmnd)
