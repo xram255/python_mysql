@@ -6,4 +6,16 @@
 
 *000webhost remote mysql disabled for free users*
 
+~~~~ 
+
+quote??
+
+~~~~
+
++ Another bullet point
+
+~~crossed~~
+<br><del>another crossed
+
+new line
 
